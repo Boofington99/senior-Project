@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | Husky United</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="login-page">
+    <section class="login-art">
+      <div class="login-mark"><span class="brand-mark">HU</span> Husky United</div>
+      <div><h1>Find your people at UConn.</h1><p>Husky United helps you discover campus events, meet fellow Huskies, and build meaningful connections across the UConn community.</p></div>
+      <small>Built for everyday belonging.</small>
+    </section>
+    <section class="login-form-side">
+      <form class="login-form" action="home.html" data-login-form>
+        <div class="eyebrow">Welcome back</div>
+        <h2>Sign in</h2>
+        <p class="lede">Pick up where you left off.</p>
+        <div class="form-row"><label for="username">Username</label><input id="username" type="text" placeholder="Enter your username" autocomplete="username" required></div>
+        <div class="form-row"><label for="password">Password</label><input id="password" type="password" placeholder="Your password" required></div>
+        <div class="forgot"><a href="#">Forgot password?</a></div>
+        <button class="btn" type="submit">Continue to Husky United</button>
+        <p class="lede" style="text-align:center;margin:20px auto 0;font-size:12px;">New here? <a href="#" style="color:var(--teal);font-weight:800;">Create an account</a></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">Matthew Carrillo Â· 2026-2027 Â· Senior Project Â· University of Connecticut</footer>
+  <script>
+    document.querySelector('[data-login-form]').addEventListener('submit', (event) => {
+      const username = document.querySelector('#username').value.trim();
+      localStorage.setItem('huskyUnitedUsername', username);
+      event.preventDefault();
+      window.location.href = event.currentTarget.action;
+    });
+  </script>
+</body>
+</html>
+
