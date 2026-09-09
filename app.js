@@ -22,10 +22,10 @@ document.querySelectorAll('.brand-mark').forEach((mark) => {
   mark.textContent = 'HU';
 });
 
-document.querySelectorAll('.nav-icon').forEach((icon) => icon.remove());
-
 const menuButton = document.querySelector('.menu-button');
 if (menuButton) menuButton.textContent = '';
+
+document.querySelectorAll('.nav-icon').forEach((icon) => icon.remove());
 
 if (currentPage === 'profile') {
   document.querySelectorAll('.list .avatar').forEach((avatar) => {
@@ -36,15 +36,8 @@ if (currentPage === 'profile') {
 const chatSendButton = document.querySelector('.chat-input button');
 if (chatSendButton) chatSendButton.textContent = 'Send';
 
-const profileLocation = document.querySelector('.profile-head > div:nth-child(2) span');
-if (profileLocation) profileLocation.textContent = profileLocation.textContent.replace('Â·', '·');
-
 document.querySelectorAll('button').forEach((button) => {
   button.textContent = button.textContent.replace(/^\+\s*/, '');
-});
-
-document.querySelectorAll('.event-date + .item-copy span, .journal-card strong').forEach((text) => {
-  text.textContent = text.textContent.replaceAll('Â·', '·');
 });
 
 const mojibakeFixes = {
