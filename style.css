@@ -102,9 +102,9 @@ label { color: var(--muted); font-size: 12px; font-weight: 800; margin-bottom: -
 .pin { position: absolute; width: 20px; height: 20px; border-radius: 50% 50% 50% 0; background: var(--coral); transform: rotate(-45deg); box-shadow: 0 3px 8px #000E2F66; }
 .pin:after { content: ""; width: 7px; height: 7px; background: white; border-radius: 50%; position: absolute; top: 7px; left: 7px; }
 .map-label { position: absolute; background: #FFFFFF; padding: 11px 13px; border-radius: 8px; box-shadow: 0 5px 15px #000E2F20; font-size: 12px; font-weight: 800; }
-body.nav-collapsed .sidebar { width: 180px; padding-left: 12px; padding-right: 12px; }
-body.nav-collapsed .main { width: calc(100% - 180px); margin-left: 180px; }
-body.nav-collapsed .brand strong, body.nav-collapsed .nav-label { display: none; }
+body.nav-collapsed .sidebar { width: 76px; padding-left: 12px; padding-right: 12px; }
+body.nav-collapsed .main { width: calc(100% - 76px); margin-left: 76px; }
+body.nav-collapsed .brand strong, body.nav-collapsed .nav-label, body.nav-collapsed .nav, body.nav-collapsed .sidebar-foot { display: none; }
 body.nav-collapsed .brand { justify-content: center; padding-left: 0; padding-right: 0; }
 body.nav-collapsed .nav a { justify-content: flex-start; }
 
@@ -129,6 +129,8 @@ body.nav-collapsed .nav a { justify-content: flex-start; }
   body.nav-collapsed .sidebar { width: var(--sidebar); padding: 26px 18px; }
   body.nav-collapsed .main { width: 100%; margin-left: 0; }
   body.nav-collapsed .brand strong, body.nav-collapsed .nav-label { display: block; }
+  body.nav-collapsed .nav { display: grid; }
+  body.nav-collapsed .sidebar-foot { display: block; }
   body.nav-collapsed .brand { justify-content: flex-start; padding-left: 10px; padding-right: 10px; }
   body.nav-collapsed .nav a { justify-content: flex-start; }
   .topbar { padding: 0 20px; height: 70px; }

@@ -101,7 +101,11 @@ document.querySelector('[data-menu-toggle]')?.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 800) document.body.classList.remove('nav-open');
+  if (window.innerWidth > 800) {
+    document.body.classList.remove('nav-open');
+  } else {
+    document.body.classList.remove('nav-collapsed');
+  }
 });
 
 document.querySelectorAll('.sidebar a').forEach((link) => {
