@@ -33,16 +33,27 @@ const userProfiles = {
   Johnathan: {
     name: "Johnathan",
     photo: "IMG/John-UserPhoto.jpg",
+    description:
+      "Trying to notice the good stuff, make useful things, and never say no to a walk.",
+    interests: ["Gardening", "Drawing", "Good food"],
+    connectionStyle: "Slow conversations and small groups",
   },
 
   Student: {
     name: "Student",
     photo: "IMG/Student-UserPhoto.jpg",
+    description:
+      "Always looking for something new to do around campus and people to experience it with.",
+    interests: ["Gaming", "Music", "Technology"],
+    connectionStyle: "Casual conversations and shared activities",
   },
 
-  IchigoKurisaki: {
-    name: "Ichigo Kurisaki",
+  IchigoKurosaki: {
+    name: "Ichigo Kurosaki",
     photo: "IMG/Ichigo-UserPhoto.jpg",
+    description: "test",
+    interests: ["test"],
+    connectionStyle: "test",
   },
 };
 
@@ -254,7 +265,39 @@ if (currentPage === "profile") {
     profileName.textContent = loggedInUsername;
   }
 }
+if (currentPage === "profile") {
+  const profileName = document.querySelector("#profile-name");
 
+  if (profileName) {
+    profileName.textContent = loggedInUser?.name || loggedInUsername;
+  }
+
+  const profileDescription = document.querySelector("#profile-description");
+
+  if (profileDescription) {
+    profileDescription.textContent =
+      loggedInUser?.description || "No description yet.";
+  }
+
+  const profileInterests = document.querySelector("#profile-interests");
+
+  if (profileInterests) {
+    if (loggedInUser?.interests?.length) {
+      profileInterests.innerHTML = loggedInUser.interests
+        .map((interest) => `<span class="tag">${interest}</span>`)
+        .join(" ");
+    } else {
+      profileInterests.textContent = "No interests added yet.";
+    }
+  }
+
+  const profileConnection = document.querySelector("#profile-connection");
+
+  if (profileConnection) {
+    profileConnection.textContent =
+      loggedInUser?.connectionStyle || "No connection style set yet.";
+  }
+}
 /* =========================================
    ACTIVE NAVIGATION
    ========================================= */
