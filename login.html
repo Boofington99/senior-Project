@@ -26,15 +26,52 @@
       </form>
     </section>
   </main>
-  <footer class="site-footer">Matthew Carrillo Â· 2026-2027 Â· Senior Project Â· University of Connecticut</footer>
-  <script>
-    document.querySelector('[data-login-form]').addEventListener('submit', (event) => {
-      const username = document.querySelector('#username').value.trim();
-      localStorage.setItem('huskyUnitedUsername', username);
+  <footer class="site-footer">Matthew Carrillo · 2026-2027 · Senior Project · University of Connecticut</footer>
+<script>
+  const testAccounts = {
+    Johnathan: 'Husky4Ever',
+    Student: 'Student123',
+    IchigoKurisaki: 'Ichigo123'
+  };
+
+  document
+    .querySelector('[data-login-form]')
+    .addEventListener('submit', (event) => {
+
       event.preventDefault();
-      window.location.href = event.currentTarget.action;
+
+      const username =
+        document.querySelector('#username').value.trim();
+
+      const password =
+        document.querySelector('#password').value;
+
+      if (
+        testAccounts[username] &&
+        testAccounts[username] === password
+      ) {
+
+        localStorage.setItem(
+          'huskyUnitedUsername',
+          username
+        );
+
+        localStorage.setItem(
+          'huskyUnitedLoggedIn',
+          'true'
+        );
+
+        window.location.href =
+          event.currentTarget.action;
+
+      } else {
+
+        alert('Incorrect username or password.');
+
+      }
+
     });
-  </script>
+</script>
 </body>
 </html>
 
