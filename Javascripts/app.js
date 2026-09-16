@@ -20,7 +20,7 @@ const testAccounts = {
     password: "Student123",
   },
 
-  IchigoKurisaki: {
+  IchigoKurosaki: {
     password: "Ichigo123",
   },
 };

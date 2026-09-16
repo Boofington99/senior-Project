@@ -315,6 +315,7 @@ h3 {
 }
 .btn:hover {
   background: var(--teal-dark);
+  color:#fcfdfb
 }
 .btn-light {
   background: #7c878e33;

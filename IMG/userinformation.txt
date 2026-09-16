@@ -1,0 +1,11 @@
+Johnathan: {
+    password: "Husky4Ever",
+  },
+
+  Student: {
+    password: "Student123",
+  },
+
+  IchigoKurisaki: {
+    password: "Ichigo123",
+  },
