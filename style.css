@@ -637,7 +637,7 @@ body.nav-collapsed .nav a {
 }
 .login-form-side {
   background: var(--paper);
-  border-radius: 34px 0 0 34px;
+  /* border-radius: 34px 0 0 34px; */
   padding: 60px clamp(28px, 7vw, 105px);
   display: flex;
   align-items: center;
@@ -774,7 +774,7 @@ body.nav-collapsed .nav a {
     font-size: 47px;
   }
   .login-form-side {
-    border-radius: 28px 28px 0 0;
+    /* border-radius: 28px 28px 0 0; */
     padding: 42px 26px;
   }
 }
@@ -821,6 +821,7 @@ body.nav-collapsed .nav a {
   .site-footer {
     padding: 14px 16px;
     font-size: 11px;
+    background-color: #ffffff;
   }
   .topbar {
     padding: 0 14px;
